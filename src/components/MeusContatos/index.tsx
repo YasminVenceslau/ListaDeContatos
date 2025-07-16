@@ -8,7 +8,7 @@ import type TarefaClass from '../../models/Tarefa'
 import { Botao, BotaoSalvar } from '../../styles'
 
 import * as enums from '../../Utils/enums/Tarefa'
-import { Mail, Phone, Star, StarOff } from 'lucide-react'
+import { Mail, Phone, Star } from 'lucide-react'
 
 type Props = TarefaClass
 
@@ -36,12 +36,6 @@ const MeusContatos = ({
     setNumero(numeroOriginal)
   }
 
-  function alteraStatusTarefa(evento: ChangeEvent<HTMLInputElement>) {
-    dispatch(alteraStatus({
-      numero,
-      finalizado: evento.target.checked
-    }))
-  }
 
   function alteraStatusTarefaSimples() {
   dispatch(alteraStatus({

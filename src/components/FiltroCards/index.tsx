@@ -20,11 +20,15 @@ const FiltroCard = ({ legenda, criterio, valor }: Props) => {
   const { filtro, contatos } = useSelector ( (state: RootReducer) => state)
 
   const verificaEstadoAtivoCor = () => {
-    const mesmoCriterio = filtro.criterio === criterio
-    const mesmoValor = filtro.valor === valor
-
-    return mesmoCriterio && mesmoValor
+    if (criterio === 'Todas') {
+    return filtro.criterio === 'Todas'
   }
+
+  const mesmoCriterio = filtro.criterio === criterio
+  const mesmoValor = filtro.valor === valor
+
+  return mesmoCriterio && mesmoValor
+}
 
   const contarTarefas = () => {
     if (criterio === 'Todas')
