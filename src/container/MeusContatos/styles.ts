@@ -20,7 +20,25 @@ export const Forma = styled.form `
     
   }
 `
+export const NovoContaiiner = styled.div`
+  padding: 0 40px;
+  display: flex;
+  grid-template-columns: 1fr 2fr;
+  align-items: stretch;
+  padding-top: 64px;
+  text-align: center;
+  ul{
+    display: block;
+    
+    
+    
+  }
 
+  li{
+      padding-left: 8px;
+      
+    }
+`
 
 export const Opcoes = styled.div `
   margin-bottom: 16px;

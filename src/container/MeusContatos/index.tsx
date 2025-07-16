@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 
 
 import { BotaoSalvar, Campo, MainContainer, Titulo } from "../../styles"
-import { Forma, Opcoes, Opcao } from "./styles"
+import { Forma, Opcoes, Opcao, NovoContaiiner } from "./styles"
 import * as enums from "../../Utils/enums/Tarefa"
 import { cadastrar } from "../../store/reducers/tarefas"
 import { UsersRound } from "lucide-react"
@@ -33,7 +33,7 @@ const MeusContatos = () => {
   }
 
   return (
-    <MainContainer>
+    <NovoContaiiner>
       <Titulo> <UsersRound /> Novo Contatinho </Titulo>
       <Forma onSubmit={cadastrarTarefas}>
           <Campo
@@ -75,7 +75,7 @@ const MeusContatos = () => {
           </Opcoes>
           <BotaoSalvar type='submit' >Cadastrar</BotaoSalvar>
       </Forma>
-    </MainContainer>
+    </NovoContaiiner>
   )
 }
 
